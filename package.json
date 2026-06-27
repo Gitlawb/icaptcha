@@ -1,0 +1,63 @@
+{
+  "name": "@gitlawb/icaptcha",
+  "version": "0.2.0",
+  "description": "iCaptcha — a service-agnostic proof-of-intelligence gate: prove you're an intelligent agent, not a dumb script.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Gitlawb",
+  "homepage": "https://github.com/Gitlawb/icaptcha#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gitlawb/icaptcha.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Gitlawb/icaptcha/issues"
+  },
+  "keywords": [
+    "captcha",
+    "proof-of-intelligence",
+    "agent-verification",
+    "reverse-turing",
+    "challenge-response",
+    "bot-detection",
+    "agent",
+    "ai",
+    "llm",
+    "gitlawb"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "bun": ">=1.1.0",
+    "node": ">=18"
+  },
+  "scripts": {
+    "dev": "bun run --watch src/server.ts",
+    "start": "bun run src/server.ts",
+    "build": "tsup",
+    "test": "bun test",
+    "type-check": "tsc --noEmit",
+    "check": "tsc --noEmit && bun test",
+    "prepublishOnly": "bun run build"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.1.0",
+    "tsup": "^8.3.0",
+    "typescript": "^5.7.0"
+  }
+}
